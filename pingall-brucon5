@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+
+
+ips="
+10.20.4.10-brucon5-ctrl
+10.20.4.11-brucon5-ctrlpanel
+10.20.4.12-brucon5-ctrlbackup
+10.20.4.150-brucon5-sim
+10.20.120.11-brucon5-commonpanel
+"; 
+ 
+
+
+source pingall
+pingall $ips

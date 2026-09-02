@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+
+
+ips="
+10.0.0.1-main-gateway
+10.0.0.65-main-ems_indicator_panel
+10.0.0.96-main-lenovo_jonas
+10.0.0.210-main-ems_plc_mitsubishi
+10.0.0.211-main-ems_display_marinex
+10.0.0.215-main-vacon_PLC
+10.0.0.230-main-bms
+10.0.0.231-main-bms_hmi
+10.0.0.254-main-vpn_gateway
+10.0.10.1-port-gateway
+10.0.10.10-port-cpp
+10.0.10.12-port-cpp_x2
+10.0.10.30-port-thruster
+10.0.10.32-port-thruster_panel
+10.0.10.110-port-sg
+10.0.10.112-port-sg_x2
+10.0.0.146-port-vacon_PLC
+10.0.20.1-star-gateway
+10.0.20.20-star-cpp
+10.0.20.22-star-cpp_x2
+10.0.20.40-star-thruster
+10.0.20.42-star-thruster_panel
+10.0.20.120-star-sg
+10.0.20.122-star-sg_x2
+10.20.4.10-brucon5-thing1
+"; 
+ 
+
+
+source pingall
+pingall $ips

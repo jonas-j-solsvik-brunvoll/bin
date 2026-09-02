@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+
+
+pingall() {
+    for strargs in "$@"; do
+       
+        IFS="-" read -r -a args <<< "$strargs"
+
+        ip="${args[0]}"
+        subnet="${args[1]}"
+        name="${args[2]}"
+           
+        if ping -c 1 -W 0.1 "$ip" >/dev/null; then
+            echo -e "ping\t$ip\tOK\t$subnet\t$name"
+        else
+            echo -e "ping\t$ip\tERROR\t$subnet\t$name"
+        fi
+    done
+}
+
